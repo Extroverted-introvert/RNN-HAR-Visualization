@@ -40,6 +40,8 @@ This notebook lays the groundwork for the entire project.
 *   **Teaches** how to prepare and shape data tensors for PyTorch's RNN layers, including the difference between `batch-first` and `time-first` formats.
 *   **Visualizes** sample activity sequences to build intuition about the underlying patterns.
 
+![alt text](walking-sensor-plot.png) ![alt text](sitting-sensor-plot.png) ![alt text](laying-sensor-plot.png)
+
 ###  Notebook 2: `02_Training_a_Vanilla_RNN_for_Activity_Recognition.ipynb`
 
 This notebook moves from theory to practice by building and training a complete classifier.
@@ -50,7 +52,7 @@ This notebook moves from theory to practice by building and training a complete 
 *   **Evaluates** the trained model on the test set, generating a **confusion matrix** and a classification report to analyze performance.
 *   **Discusses** the theoretical limitations of vanilla RNNs, such as the vanishing gradient problem.
 
-
+![alt text](loss-plot.png)
 
 ###  Notebook 3: `03_Visualizing_Hidden_States_&_Temporal_Representation.ipynb`
 
@@ -61,7 +63,7 @@ Here, we "open the black box" to understand what the RNN has learned internally.
 *   **Applies PCA and t-SNE** to project the high-dimensional hidden states into a 2D space, revealing how the model clusters and separates activities.
 *   **Plots** the temporal paths of sequences in the reduced space to show how the RNN's memory "moves" as it processes an activity.
 
-
+![alt text](pca.png) ![alt text](t-sne.png) ![alt text](trajectories.png)
 
 ###  Notebook 4: `04_What_the_RNN_Learns_vs_Where_it_Fails.ipynb`
 
@@ -72,14 +74,14 @@ The final notebook focuses on diagnosing the specific failure modes of our vanil
 *   **Visualizes** the raw sensor signals for misclassified examples to understand why the model struggles.
 *   **Motivates** the need for more advanced architectures like LSTMs and GRUs, which are designed to overcome these limitations.
 
-
+![alt text](vanishing-gradient.png)
 
 ## Setup and Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-name>
+    git clone https://github.com/Extroverted-introvert/RNN-HAR-Visualization
+    cd RNN-HAR-Visualization
     ```
 
 2.  **Download the dataset:**
